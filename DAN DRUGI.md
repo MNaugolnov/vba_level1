@@ -1,4 +1,4 @@
-### DAN DRUGI 
+# DAN DRUGI 
 Ponovimo šta smo radili dan prije toga u jednom kodu koji će biti priprema za naredni dan, na koji ćemo dodavati uslove
 
 Dodati komentar da mi je sada jasno da se pitate i zasto nesto da radim na celiji, danas sve dobija smisao, jer cemo dosadasnja znanja primenjivati sa svhom tamo gde imamo sansu da pogresimo i ne mozemo u kratkom roku da sve vidimo
@@ -40,9 +40,9 @@ Cells(33, 1).Value = zakljucak
 
 End Sub
 ```
+----------
 
------------
-'Provera tipa podataka
+### Provera tipa podataka
 ```
 Sub d2_ulov2()
 'Konvertovanje vrednosti aktivne æelije
@@ -60,31 +60,29 @@ End If
 End Sub
 
 ```
-#Prikazati sta sve može da stoji u uslovu i koja provera tipova podataka na prezentacji
+Prikazati sta sve može da stoji u uslovu i koja provera tipova podataka na prezentacji
 
+## Petlje 
 
---------------------------------------------------Petlje------------------------------------
-
-#Ali mi ne zelimo da primenimo uslov samo na jednoj ćeliji
------------FOR--------------
+Ali mi ne zelimo da primenimo uslov samo na jednoj ćeliji
+### FOR ### 
 ```
 Sub d2_petlje_for1()
-
 'Obojiti vrednosti u prema opsegu cena-cela kolona
+
 Dim cena As Integer
 
 For i = 2 To 29
     cena = Cells(i, 2).Value
 
-     If cena > 0 And cena <= 20 Then
-        
-            Cells(i, 2).Font.ColorIndex = 6
-            
-     ElseIf cena > 20 And cena <= 40 Then
-    
-            Cells(i, 2).Font.ColorIndex = 10
-     Else
-           Cells(i, 2).Font.ColorIndex = 16
+    If cena > 0 And cena <= 20 Then
+        Cells(i, 2).Font.ColorIndex = 6
+
+    ElseIf cena > 20 And cena <= 40 Then
+        Cells(i, 2).Font.ColorIndex = 10
+
+    Else
+        Cells(i, 2).Font.ColorIndex = 16
           
     End If
 
@@ -94,8 +92,8 @@ End Sub
 
 ```
 Sub d2_petlje_for2()
-
 'Obijo vrednosti u prema opsegu cena - cela kolona
+
 Dim cena As Integer
 
 For Each cell In Range("B2:I29") 'Range("B2:B29") ili Range(Cells(1,1),Cells(29,8)
@@ -117,7 +115,7 @@ Next
 
 End Sub
 ```
--------------While----------
+### While 
 ```
 Sub d2_petlje_while1()
 'Prvo pojavljivanje cene treæeg ranga
@@ -142,15 +140,12 @@ Dim r As Integer
     MsgBox ("Datum cene " + CStr(Cells(r, 1).Value))
 End Sub
 ```
--------------------------------------------------------------------------------------
 
-
-
-
---------------------Procedure i funkcije -------------------------
+## Procedure i funkcije 
 Preurediti na primeru kada vraca koji je prosek nekog sata za sve dane
 ```
 Function konverzija(cena_e As Double) As Double
+
 'Funkcije-izazna vrednost koja može postati deo neke druge procedure
     Const Rate As Double = 118
     
@@ -168,7 +163,7 @@ End Sub
 
 
 
-----------------------------WB i WS------------------------------------------------------
+## WB i WS
 * Dosadadanji rad, rad na jednom listu, kao refetentni uvijek uzima aktivni sheet (predji na D1 i ponovo odradi proceduru neku)
 * Ako želimo da radimo na nekom drugom listu, moramo posebno da se pozovemo
 * Kako smo se opcijama Range,Cells pozivali na celije ili skup celija u okviru jednog lista, na isti način pristupamo i radnim listovima
@@ -183,9 +178,8 @@ Sub d2_radni_list1()
 '   MsgBox Sheets("D1").Name
 '   MsgBox Sheets(1).Name
 '   MsgBox ActiveSheet.Name
-
-
 '.ACTIVATE
+
 'Aktivan list ostaje poæetni, neovisno od instrukcija, dok drugacije ne neglasimo
     Sheets("D1").Activate
     MsgBox ActiveSheet.Name
