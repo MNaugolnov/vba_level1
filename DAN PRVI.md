@@ -62,11 +62,11 @@ Pojasniti podatke o berzama eketriče energije.
 ### Selektovanje 
 * Vid pristupa celiju, skupu celija, pozicioniranje u sonovi
 
-/Mi dok radimo imamo razlicite vrste objekata i postoje funkcionalnosti koje se mogu primeniti na određene objekte samo
+* Mi dok radimo imamo razlicite vrste objekata i postoje funkcionalnosti koje se mogu primeniti na određene objekte samo
 
-/Cilj danas je da shvatimo sta zapravo moze da se radi na ćeliji, na skupu ćelija i kako da im pristupimo, čitamo vrednosti iz njih i menjamo
+* Cilj danas je da shvatimo sta zapravo moze da se radi na ćeliji, na skupu ćelija i kako da im pristupimo, čitamo vrednosti iz njih i menjamo
 
-/Sutra ćemo prelaziti na list i radnu svesku, no nužno je da se dobro upoznamo sa svim sto jedno polje nosi
+* Sutra ćemo prelaziti na list i radnu svesku, no nužno je da se dobro upoznamo sa svim sto jedno polje nosi
 
 ```
 Sub m_record()
