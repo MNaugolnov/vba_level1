@@ -17,11 +17,11 @@ Voleo bih da spomenem par stvari, recimo ono sto bih vam mogao pokazati jeste na
 Primer MAIN i MG (Navesti primere skidanja sa stranica, pravljenja izvestaja u Excelu, ali i pravljenja Word tipslih dokumenata, 
 
 ### Dodaj
-
+```
 If MsgBox("Text", vbYesNo, "Title") = vbYes Then
 
 InputBox("Text ?", "Title", "Default value")
-
+```
 
 ```
 Sub m_napravi_izvestaj()
