@@ -6,7 +6,7 @@
 
 ### CILJEVI
 
-Milivoje 
+_Milivoje_
 
 Cilj: Da za ova tri dana napiše iz glave velike kod i razume 99% komandi koje mogu biti otkucane. 
 
@@ -43,26 +43,24 @@ kao i pravljenjem tabel
 ## UVOD i PRVI MACRO
 Pojasniti podatke o berzama eketriče energije.
 
-/Recording Macro (Prices)
+* Recording Macro (Prices)
 
-/Run Macro (Pojasniti da imamo više načina runovanja macroa)
+* Run Macro (Pojasniti da imamo više načina runovanja macroa)
 
-/Pojasniti delove prozor koje imamo, Module i slično 
+* Pojasniti delove prozor koje imamo, Module i slično 
 
-/Preimenovati module na Dan1 
+* Preimenovati module na Dan1 
 
-/Pojasniti naziv, komponendete Sub/End Sub su početak i kraj Macroa (pripremi se za private, public za svaki slucaj)
+* Pojasniti naziv, komponente Sub/End Sub su početak i kraj Macroa (pripremi se za private, public za svaki slucaj)
 
-/Obrisati ovaj sadržaj ručno pa pokrenuti macro na oba načina i preko skraćenice i kroz run, a pokazati da ima i run dugme u VBA prozoru
+* Obrisati ovaj sadržaj ručno pa pokrenuti macro na oba načina i preko skraćenice i kroz run, a pokazati da ima i run dugme u VBA prozoru
 
-
-
-/Ispraviti Macro, promeniti pozicije, dodati naslovni red i promeniti boju slova i centrirati
+* Ispraviti Macro, promeniti pozicije, dodati naslovni red i promeniti boju slova i centrirati
 
 
 
 ### Selektovanje 
-/Vid pristupa celiju, skupu celija, pozicioniranje u sonovi
+* Vid pristupa celiju, skupu celija, pozicioniranje u sonovi
 
 /Mi dok radimo imamo razlicite vrste objekata i postoje funkcionalnosti koje se mogu primeniti na određene objekte samo
 
@@ -72,7 +70,7 @@ Pojasniti podatke o berzama eketriče energije.
 
 ```
 Sub m_record()
-'
+
 ' m_record Macro
 ' Prikaz cena na poèetku, sredini i kraju dana.
 '
@@ -93,6 +91,8 @@ Sub m_selektovanje1()
 'Selektovanje polja A1
     Range("A1").Select
 End Sub
+```
+```
 Sub m_selektovanje2()
 'Selektovanje opsega polja - Range
     Range("A1:B29").Select
@@ -163,13 +163,14 @@ End Sub
 ### Modifikovanje ćelija i vrednosti u ćelijama 
 Nakon što smo naučili da se pozicioniramo i krećemo po radnom listu, to je bas lijepo, ali naš cilj je da menjamo sdaržaj i modifikujemo vrednosti u ćelijama
 Nakon što na Range dodamo tačku otvara se padajući meni, koji sadrži sve moguće funkcionalnosti koje bismo mi mogli sprovoditi nad ćelijom.
-
+```
 Sub m_modifikovanje1()
 'Pristupiti vrednosti æelije
 MsgBox Range("A1").Value
 MsgBox "Završeno"
 End Sub
-
+```
+```
 Sub m_modifikovanje2()
 'Promena vrednosti i formata æelije
     'Nova vrednost
@@ -188,6 +189,8 @@ Sub m_modifikovanje2()
     Cells(1, 1).Border.Weight = 4
     
 End Sub
+```
+```
 Sub m_modifikovanje3()
 'Promena željenog na aktivnoj æeliji
     ActiveCell.Value = Cells(1, 1).Value
@@ -198,7 +201,8 @@ Sub m_modifikovanje3()
     End With
        
 End Sub
-
+```
+```
 Sub m_modifikovanje4_zadatak()
 'Kopiran macro
     Range("A1:A29,B1:B29,M1:M29,Y1:Y29").Select
@@ -230,17 +234,14 @@ Sub m_modifikovanje4_zadatak()
     'Cells(32, 4).Value = Cells(32, 4).Value + "H"
         
 End Sub
+```
 
+### Promenljive 
 
+* Primer kada nece da sabere
+* Razgovarajmo o tipovima podataka koje imamo 
 
-
-
-
-#-------------Promenljive--------------------------------------
-/Primer kada nece da sabere
-/Razgovarajmo o tipovima podataka koje imamo 
-
-
+```
 Sub m_prom1()
 'Inicijalizacija promenljivih
 Dim promInt As Integer
@@ -262,9 +263,8 @@ Dim promDate As Date
      Cells(32, 3).Value = promStr + "H"
     'Cells(32, 3).Value = CStr(Cells(32, 3).Value )+ "H"
 End Sub
-
-
-
+```
+```
 Sub m_prom2()
 
 Dim br_red As Integer
@@ -272,10 +272,8 @@ Dim br_red As Integer
     MsgBox (Cells(br_red, 1).Value + "H")
     
 End Sub
-
-
-
-
+```
+```
 Sub m_pom_const()
 Const Rate As Double = 118
 
@@ -287,20 +285,13 @@ Dim br_red As Integer
     Cells(br_red, 7).Value = Cells(br_red, 4).Value * Rate
     
 End Sub 
-
-
-
-
------------------------------
+```
+```
 Sub m_dodatno1()
     'Offset opcija
     Cells(br_red, 2).Offset(0, 6).Value = Cells(br_red, 2).Value * Rate
     'ActiveCell
     MsgBox ActiveCell.Offset(0, -3).Value
 End Sub
-
-
-
-'Za posednji deo idi po radnim sveskama, ako je dvanaesti sat uzmi samo 12 sat i kopiraj iz svih mogućih 12 sat a onda naprav tabelu od toga i grafikon
-i tabel
-
+```
+Za posednji deo idi po radnim sveskama, ako je dvanaesti sat uzmi samo 12 sat i kopiraj iz svih mogućih 12 sat a onda naprav tabelu od toga i grafikon i tabel
