@@ -207,9 +207,9 @@ Dim sh_num As Integer
 'Otvoriti postojeæu radnu svesku i vrednosti prvog sata kopirati za sve berze
 
 
-'Setovnje
+'Setovanje
 Set m_wb = ActiveWorkbook
-Set c_wb = Workbooks.Open("C:\Users\jovana.arsic\DS\VBA Course\Februar_Cene\Cene.xlsx") 'xlsm napomena
+Set c_wb = Workbooks.Open("C:\Mikhail\Cene.xlsx") 'xlsm napomena
 
 
 'Provera
