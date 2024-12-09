@@ -37,13 +37,13 @@ Dim MyChart As ChartObject
 'Dodajmo novi wb u koji æemo ispisati iyvestaj
 Set w_main = ActiveWorkbook
 
-Workbooks.Add.SaveAs Filename:="\\SNS06CFSH01\HomeFolderR\jovana.arsic\Desktop\VBA BASIC\Izvestaj_Berze.xlsx"
+Workbooks.Add.SaveAs Filename:="\\SNS06CFSH01\HomeFolderR\VBA BASIC\Izvestaj_Berze.xlsx"
 Set w_report = ActiveWorkbook
 
 '-----------------------Citanje
 'Citam wb koji se nalaze u nekom folderu
 'Putanja do foldera se uvijek zavrsava slesom
-folder = "\\SNS06CFSH01\HomeFolderR\jovana.arsic\Desktop\VBA BASIC\Cene\"
+folder = "\\SNS06CFSH01\HomeFolderR\VBA BASIC\Cene\"
 
 
 file = Dir(folder)
